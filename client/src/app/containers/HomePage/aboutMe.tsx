@@ -68,20 +68,16 @@ const Title = styled.h1`
   `};
 `;
 
-const InfoText = styled.div`
-  ${tw`
-    md:max-w-2xl
-    text-sm
-    md:text-base
-    text-gray-500
-    font-normal
-    mt-4
-    text-justify
-  `};
 
-    p {
-      margin-bottom: 1em;
-    }
+const InfoText = styled.small`
+  font-size: 15px;
+  ${tw`
+    text-gray-500
+    font-thin
+    text-justify
+    mt-2
+    mb-1
+  `}
 `;
 
 export const AboutMe = forwardRef<HTMLDivElement>((props, ref) => {
@@ -93,11 +89,13 @@ export const AboutMe = forwardRef<HTMLDivElement>((props, ref) => {
       <InfoContainer>
         <Title>My Story: Innovating Bits and Bytes</Title>
         <InfoText>
-          <p>After 4 years of experience working on engineering projects, I made a career transition to Software development, DevOps and cloud computing in 2019, giving me the opportunity to finally explore my deeply-rooted interest in technology that had remained latent until then. I am super passionate about technology and problem-solving, and have a lifelong learning attitude as a personal culture.</p>
-      
-          <p>My programming expertise includes JavaScript, Node.js, React, Express, MongoDB, Python, Flask, and MySQL. I have hands-on DevOps experience working with CI/CD pielines, cloud services, Docker, Kubernetes, and RESTful APIs. Additionally, I have a strong understanding of AWS and Azure cloud ecosystems, and I am proficient in infrastructure as code using Terraform and CloudFormation, configuration management with Ansible and scripting and automation using Bash and Python.</p>
-
-          <p>I am committed to continuous learning to stay updated with the latest technology and industry standards. With my helpful personality, self-driven approach to problem-solving, and team spirit, I would be a valuable addition to any team seeking a skilled Software/DevOps Engineer.</p>
+          After 4 years of experience working on engineering projects, I made a career transition to Software development, DevOps and cloud computing in 2019, giving me the opportunity to finally explore my deeply-rooted interest in technology that had remained latent until then. I am super passionate about technology and problem-solving, and have a lifelong learning attitude as a personal culture.
+        </InfoText>
+        <InfoText>
+          My programming expertise includes JavaScript, Node.js, React, Express, MongoDB, Python, Flask, and MySQL. I have hands-on DevOps experience working with CI/CD pielines, cloud services, Docker, Kubernetes, and RESTful APIs. Additionally, I have a strong understanding of AWS and Azure cloud ecosystems, and I am proficient in infrastructure as code using Terraform and CloudFormation, configuration management with Ansible and scripting and automation using Bash and Python.
+        </InfoText>
+        <InfoText>
+          I excel at balancing autonomy and teamwork, and am committed to continuous learning to stay updated with the latest technology and industry standards. With my helpful personality, self-driven approach to problem-solving, and team spirit, I would be a valuable addition to any team seeking a skilled Software/DevOps Engineer.
         </InfoText>
       </InfoContainer>
     </AboutMeContainer>

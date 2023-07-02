@@ -81,30 +81,57 @@ export const TopProjects = forwardRef<HTMLDivElement>((props, ref) => {
 
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
-  const testProject1: IProject = {
-    imgSrc: "https://media.istockphoto.com/id/481574937/photo/calgary-skyline.jpg?s=1024x1024&w=is&k=20&c=41AF5Hlf3a5YkINowR0dv13Oj-YdbVulKOtYcdPxTDg=", 
-    name: "Project 1", 
-    summary: "Responsive fullstack business website using React.js, GraphQL, Typescript, Tailwindcss, Node.js, Express.js, Nest.js, TypeORM, Docker and VPS.", 
-    description: "",
-    websiteLink: "https://github.com/kenneth-alt", 
-    githubLink: "https://github.com/kenneth-alt",
+  const WaitEase: IProject = {
+    imgSrc: "https://i.postimg.cc/QddYP86N/04-waitease.png", 
+    name: "WaitEase", 
+    summary: "Responsive fullstack business website for a Queue Management Application using Python Flask, Bootstrap, custom CSS, and MySQL.", 
+    features: "Features: Registration, Authentication, Password Encryption, Admin Dashboard, Barcode generation, realtime position update.",
+    websiteLink: "#", 
+    githubLink: "https://github.com/kenneth-alt/wait-ease-v1",
   };
 
-  const testProject2: IProject = {
-    imgSrc: "https://media.istockphoto.com/id/481574937/photo/calgary-skyline.jpg?s=1024x1024&w=is&k=20&c=41AF5Hlf3a5YkINowR0dv13Oj-YdbVulKOtYcdPxTDg=", 
-    name: "Project 2", 
-    summary: "Responsive fullstack business website using React.js, GraphQL, Typescript, Tailwindcss, Node.js, Express.js, Nest.js, TypeORM, Docker and VPS.", 
-    description: "",
-    websiteLink: "https://github.com/kenneth-alt", 
+  const everychildplays: IProject = {
+    imgSrc: "https://i.postimg.cc/rFKtY71X/03-everychildplays.png", 
+    name: "everychildplays", 
+    summary: "Fullstack MERN pplication consuming a third party API to build a directory of all inclusive playgrounds in the city of Calgary.", 
+    features: "Features: Registration, Authentication, Password Encryption, Session management, Maps and directions, Reviews.",
+    websiteLink: "#", 
+    githubLink: "https://github.com/kenneth-alt/everychildplays",
+  };
+
+  const yycAero: IProject = {
+    imgSrc: "https://i.postimg.cc/BQ6vnDbx/01-yyc-aero.png", 
+    name: "YYC-Aero", 
+    summary: "Responsive fullstack business website using React.js, GraphQL, Typescript, Tailwindcss, Express.js, Nest.js, TypeORM, Docker.", 
+    features: "",
+    websiteLink: "#", 
+    githubLink: "https://github.com/kenneth-alt/calgary-aero-full-stack",
+  };
+
+  const awsDeployment: IProject = {
+    imgSrc: "https://i.postimg.cc/Vv11hzYR/02-AWS-cruddur.png", 
+    name: "AWS Fullstack Deployment", 
+    summary: "Project to demonstrate deployment of a fullstack web application with Python Flask backend and React frontend on AWS cloud. ", 
+    features: "Features: Deployment, Docker, Authentication, Routing, Loadbalancing and Caching.",
+    websiteLink: "#", 
+    githubLink: "https://github.com/kenneth-alt/aws-bootcamp-cruddur-2023",
+  };
+
+  const wendyAi: IProject = {
+    imgSrc: "https://i.postimg.cc/vHy9MnqY/05-wendy-ai.png", 
+    name: "Wendy AI", 
+    summary: "Project to demonstrate deployment of a fullstack AI Application in AWS cloud, using LangChain, Vector databases, OpenAI, GoodData, React, Typescript, Tailwind.", 
+    features: "Features: API first approach, Analtyics as code, SSO",
+    websiteLink: "#", 
     githubLink: "https://github.com/kenneth-alt",
   };
 
   const projects = [
-    <Project {...testProject1} />,
-    <Project {...testProject2} />,
-    <Project {...testProject1} />, 
-    <Project {...testProject2} />,
-    <Project {...testProject1} />, 
+    <Project {...WaitEase} />,
+    <Project {...everychildplays} />,
+    <Project {...yycAero} />, 
+    <Project {...awsDeployment} />,
+    <Project {...wendyAi} />, 
   ];
 
   const numberOfDots = isMobile ? projects.length : Math.ceil(projects.length / 3);

@@ -61,26 +61,23 @@ const ProjectName = styled.h3`
     text-base
     font-bold
     text-black
-    mt-1
     mb-1
   `};
 `;
 
-const DescriptionText = styled.h5`
+const DescriptionText = styled.small`
+  font-size: 14px;
   ${tw`
     text-gray-500
-    font-bold
-    text-sm
-  `};
+    mb-2
+  `}
 `;
 
-const SmallText = styled.p`
-  color: inherit;
+const SmallText = styled.small`
+  font-size: 12px;
   ${tw`
-    inline-flex
-    text-xs
-    font-thin
-  `};
+    text-gray-700
+  `}
 `;
 
 const SmallIcon = styled.span`
@@ -145,7 +142,7 @@ export function Project(props: IProjectProps) {
     imgSrc,
     name,
     summary,
-    description,
+    features,
     websiteLink,
     githubLink,
   } = props;
@@ -161,8 +158,9 @@ export function Project(props: IProjectProps) {
         <NameDescriptionContainer>
           <ProjectName>{name}</ProjectName>
           <DescriptionText>
-            <SmallText>{summary}</SmallText>
+            {summary}
           </DescriptionText>
+          <SmallText>{features}</SmallText>
         </NameDescriptionContainer>
         
         <LinksContainer>
@@ -170,9 +168,10 @@ export function Project(props: IProjectProps) {
           <LinksDetailsContainer>
 
             <LinksDetail>
-              <SmallIcon>
+              <a href={websiteLink} target="blank" rel="noopener noreferrer">
+                <SmallIcon>
                 <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </SmallIcon>
+                </SmallIcon></a>
             </LinksDetail>
 
             <LinksDetail>
